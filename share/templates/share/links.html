@@ -7,6 +7,7 @@
 	 {% endwith %}
 	 </li>
 	 {% endfor %}
+	 {% if providers.more %}
  	<li class="more">
  		<a class="more">| More</a>
  		<ul class="share-bar-more closed">
@@ -20,4 +21,5 @@
  			{% endfor %}
  		</ul>
 	</li>
+	{% endif %}
 </ul>
