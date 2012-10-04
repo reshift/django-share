@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import os
 
 setup(name='django-share',
-    version='0.0.2',
+    version='0.0.3',
     description='Social bookmarking',
     #long_description = read('README.rst'),
     author='Sjoerd Arendsen',
@@ -10,5 +10,5 @@ setup(name='django-share',
     #install_requires=('django-shop',),
     packages=find_packages(),
     include_package_data=True,
-    zip_safe = False,
+    zip_safe=False,
 )

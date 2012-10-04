@@ -30,19 +30,33 @@ Defaults to:
     {'main': ('facebook', 'twitter', 'pinterest', 'googleplus',),
     'more': ('email', 'print', ),}
 
+``SHARE_FACEBOOK_LANGUAGE``
+
+The language to use in your facebook apps
+
+Defaults to: 
+    
+    settings.LANGUAGE_CODE
+
 Template tags
 ==============
 
-    {{ share_css }}
-    {{ share_js }}
+    {% share_css %}
+    {% share_js %}
     
 Needed css and js files for the sharing services    
+
+    {% share_fbsdk %}
+
+Needed if you use Facebook apps. This loads the Facebook SDK. Place right after the opening <body> tag.
     
-    {{ share }}    
+    {% share %}    
     
 Renders a listing for all enabled providers. Its also possible to limit the list to a selection of providers.
 
-    {{ share facebook twitter }}  
+    {% share facebook twitter %}  
+
+
     
 Returns a list with the given providers    
 
