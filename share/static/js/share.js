@@ -33,7 +33,7 @@ $(function() {
       // Twitter
       if(opts.provider == "twitter") {
         $(this).replaceWith('<a class="share-twitter-button button" href="https://twitter.com/share?url='+ url +'" target="_blank"></a><div class="share-twitter-count count">0</div>');
-        $.getJSON('http://urls.api.twitter.com/1/urls/count.json?url='+url+'&callback=?', function(data) {  
+        $.getJSON('https://urls.api.twitter.com/1/urls/count.json?url='+url+'&callback=?', function(data) {  
           $('.share-link-twitter .count').text(data.count);
         });  
       }
@@ -41,7 +41,7 @@ $(function() {
       // Facebook
       if(opts.provider == "facebook") {
         $(this).replaceWith('<a class="share-facebook-button button" href="http://www.facebook.com/share.php?u='+ url +'" target="_blank"></a><div class="share-facebook-count count">0</div>');
-        $.getJSON('http://graph.facebook.com/'+url+'&callback=?', function(data) {  
+        $.getJSON('https://graph.facebook.com/'+url+'&callback=?', function(data) {  
             $('.share-facebook-count').text(data.shares);
         });    
       }
@@ -49,7 +49,7 @@ $(function() {
       // Pinterest
       if(opts.provider == "pinterest") {
         $(this).replaceWith('<a class="share-pinterest-button button" href="http://pinterest.com/pin/create/button/?url='+ url +'" target="_blank"></a><div class="share-pinterest-count count">0</div>');
-        $.getJSON('http://api.pinterest.com/v1/urls/count.json?callback=receiveCount&url=' + url, function(data) {  
+        $.getJSON('https://api.pinterest.com/v1/urls/count.json?callback=receiveCount&url=' + url, function(data) {  
             $('.share-pinterest-count').text(data.shares);
         });
       }
